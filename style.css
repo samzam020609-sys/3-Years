@@ -1,72 +1,658 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0b0b0f;
-  color: white;
-  overflow-x: hidden;
+/* =========================================================
+   TO MY WIFEYY ❤️
+   PART 2 - STYLE.CSS
+   CINEMATIC MOBILE-FIRST DESIGN
+========================================================= */
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-section {
-  min-height: 100vh;
-  padding: 60px 20px;
-  text-align: center;
+html{
+    scroll-behavior:smooth;
 }
 
-/* INTRO */
-#intro {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+body{
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:white;
 }
 
-.book {
-  text-align: center;
+/* =========================
+   GLOBAL
+========================= */
+
+section{
+    position:relative;
 }
 
-/* HERO */
-.hero {
-  background: linear-gradient(180deg, #111, #1a1a2e);
+h1,h2,h3{
+    font-family:'Playfair Display',serif;
 }
 
-/* CARDS */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+img{
+    width:100%;
+    display:block;
 }
 
-.card {
-  width: 120px;
-  height: 120px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(10px);
+button{
+    border:none;
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
 }
 
-/* SEASONS */
-#spring { background: #2b1b2f; }
-#summer { background: #2f2a12; }
-#autumn { background: #2a1c12; }
-#winter { background: #101a2a; }
+a{
+    text-decoration:none;
+}
 
-/* MUSIC BUTTON */
-#musicControl {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: white;
-  color: black;
-  padding: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  z-index: 9999;
+/* =========================
+   INTRO
+========================= */
+
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:black;
+}
+
+.intro-content{
+    text-align:center;
+    z-index:2;
+}
+
+.intro-line{
+    opacity:0;
+    margin-bottom:15px;
+    color:white;
+    font-weight:300;
+    letter-spacing:2px;
+}
+
+#startStory{
+    margin-top:40px;
+    padding:18px 40px;
+
+    background:white;
+    color:black;
+
+    border-radius:50px;
+
+    font-size:1rem;
+    font-weight:600;
+
+    transition:.4s;
+}
+
+#startStory:hover{
+    transform:scale(1.05);
+}
+
+.stars{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.stars::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%,white 1px,transparent 2px),
+    radial-gradient(circle at 70% 40%,white 1px,transparent 2px),
+    radial-gradient(circle at 40% 80%,white 1px,transparent 2px),
+    radial-gradient(circle at 90% 30%,white 1px,transparent 2px);
+
+    animation:starsMove 30s linear infinite;
+}
+
+@keyframes starsMove{
+    from{transform:translateY(0);}
+    to{transform:translateY(-300px);}
+}
+
+/* =========================
+   STORYBOOK
+========================= */
+
+#storybook{
+    display:none;
+}
+
+/* =========================
+   COMMON SEASON HERO
+========================= */
+
+.season-hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+}
+
+.season-hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.season-quote{
+    max-width:700px;
+    font-size:1.2rem;
+    line-height:2;
+}
+
+/* =========================================================
+   SUMMER
+========================================================= */
+
+#summer{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffd54f 0%,
+    #ffb300 40%,
+    #ff8f00 100%
+    );
+
+    overflow:hidden;
+}
+
+/* Sun Glow */
+
+.summer-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+    circle at top center,
+    rgba(255,255,255,.6),
+    transparent 50%
+    );
+
+    pointer-events:none;
+}
+
+/* Particles */
+
+.sun-particles{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.sun-particles::before{
+    content:"";
+    position:absolute;
+    inset:-100%;
+
+    background:
+    radial-gradient(circle,#fff8e1 2px,transparent 3px);
+
+    background-size:150px 150px;
+
+    opacity:.4;
+
+    animation:floatSun 30s linear infinite;
+}
+
+@keyframes floatSun{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-500px);
+    }
+}
+
+/* Hero Photo */
+
+.hero-photo{
+    width:90%;
+    max-width:900px;
+
+    margin:auto;
+
+    border-radius:30px;
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.4);
+}
+
+.hero-caption{
+    padding:20px;
+    text-align:center;
+    background:white;
+    color:black;
+}
+
+/* =========================================================
+   FLOATING POLAROIDS
+========================================================= */
+
+.polaroid-wall{
+    position:relative;
+
+    min-height:5000px;
+
+    width:100%;
+}
+
+.polaroid{
+    position:absolute;
+
+    width:220px;
+
+    background:white;
+    color:black;
+
+    padding:12px;
+
+    border-radius:5px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+
+    transition:.5s;
+}
+
+.polaroid img{
+    height:240px;
+    object-fit:cover;
+}
+
+.polaroid span{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+}
+
+/* 20 unique placements */
+
+.p1{top:100px;left:5%;transform:rotate(-8deg);}
+.p2{top:350px;right:5%;transform:rotate(10deg);}
+.p3{top:650px;left:15%;transform:rotate(5deg);}
+.p4{top:950px;right:12%;transform:rotate(-7deg);}
+.p5{top:1250px;left:7%;transform:rotate(9deg);}
+.p6{top:1550px;right:10%;transform:rotate(-9deg);}
+.p7{top:1850px;left:12%;transform:rotate(6deg);}
+.p8{top:2150px;right:15%;transform:rotate(-6deg);}
+.p9{top:2450px;left:5%;transform:rotate(8deg);}
+.p10{top:2750px;right:7%;transform:rotate(-5deg);}
+.p11{top:3050px;left:15%;transform:rotate(7deg);}
+.p12{top:3350px;right:8%;transform:rotate(-7deg);}
+.p13{top:3650px;left:10%;transform:rotate(10deg);}
+.p14{top:3950px;right:12%;transform:rotate(-10deg);}
+.p15{top:4250px;left:5%;transform:rotate(5deg);}
+.p16{top:4550px;right:5%;transform:rotate(-5deg);}
+.p17{top:4850px;left:15%;transform:rotate(7deg);}
+.p18{top:5150px;right:15%;transform:rotate(-7deg);}
+.p19{top:5450px;left:8%;transform:rotate(9deg);}
+.p20{top:5750px;right:8%;transform:rotate(-9deg);}
+
+.polaroid:hover{
+    transform:scale(1.08) rotate(0deg);
+}
+
+/* Story Cards */
+
+.summer-story{
+    padding:100px 20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+.story-card{
+    max-width:700px;
+    margin:auto;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+}
+
+/* =========================================================
+   SPRING
+========================================================= */
+
+#spring{
+    background:
+    linear-gradient(
+    180deg,
+    #ffd1dc,
+    #ffc0cb,
+    #f8bbd0
+    );
+    color:#222;
+}
+
+.spring-particles{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.spring-particles::before{
+    content:"🌸 🌸 🌸 🌸 🌸 🌸 🌸";
+    position:absolute;
+    width:200%;
+    font-size:30px;
+
+    animation:
+    blossom 25s linear infinite;
+}
+
+@keyframes blossom{
+    from{
+        transform:translateY(-100px) translateX(0);
+    }
+    to{
+        transform:translateY(3000px)
+        translateX(-400px);
+    }
+}
+
+/* Timeline */
+
+.timeline-container{
+    position:relative;
+
+    max-width:1200px;
+    margin:auto;
+
+    padding:100px 20px;
+}
+
+.timeline-line{
+    position:absolute;
+
+    left:50%;
+    top:0;
+
+    width:6px;
+    height:100%;
+
+    background:white;
+
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:50%;
+    padding:30px;
+}
+
+.left{
+    margin-right:auto;
+}
+
+.right{
+    margin-left:auto;
+}
+
+.timeline-content{
+    background:white;
+    color:black;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+/* =========================================================
+   AUTUMN
+========================================================= */
+
+#autumn{
+    background:
+    linear-gradient(
+    180deg,
+    #d2691e,
+    #a0522d,
+    #6d4c41
+    );
+}
+
+.autumn-particles{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.autumn-particles::before{
+    content:"🍂 🍁 🍂 🍁 🍂 🍁 🍂";
+    position:absolute;
+    width:200%;
+    font-size:30px;
+
+    animation:
+    leaves 20s linear infinite;
+}
+
+@keyframes leaves{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(3000px)
+        translateX(-400px);
+    }
+}
+
+.dream-board{
+    padding:100px 20px;
+}
+
+.dream-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+
+    max-width:900px;
+    margin:auto;
+}
+
+.dream-card{
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    font-size:1.1rem;
+}
+
+.future-letter{
+    max-width:800px;
+    margin:auto;
+
+    padding:40px;
+
+    background:
+    rgba(255,255,255,.12);
+
+    border-radius:30px;
+}
+
+/* =========================================================
+   WINTER
+========================================================= */
+
+#winter{
+    background:
+    linear-gradient(
+    180deg,
+    #102542,
+    #0b1a30,
+    #000814
+    );
+}
+
+.snow-container{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.snow-container::before{
+    content:"❄ ❅ ❄ ❅ ❄ ❅ ❄";
+    position:absolute;
+
+    width:200%;
+    font-size:25px;
+
+    opacity:.8;
+
+    animation:
+    snow 20s linear infinite;
+}
+
+@keyframes snow{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(3500px)
+        translateX(-300px);
+    }
+}
+
+.final-letter{
+    max-width:700px;
+    margin:auto;
+
+    padding:40px;
+
+    text-align:center;
+}
+
+.drive-section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.gift-button{
+    display:inline-block;
+
+    padding:20px 40px;
+
+    background:white;
+    color:black;
+
+    border-radius:50px;
+
+    font-weight:600;
+}
+
+#finale{
+    min-height:80vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* =========================================================
+   SEASON ENDINGS
+========================================================= */
+
+.season-ending{
+    min-height:70vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+}
+
+.season-ending button{
+    margin-top:30px;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    background:white;
+    color:black;
+
+    font-weight:600;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .season-hero h1{
+        font-size:3rem;
+    }
+
+    .season-quote{
+        font-size:1rem;
+    }
+
+    .polaroid{
+        width:170px;
+    }
+
+    .polaroid img{
+        height:180px;
+    }
+
+    .timeline-item{
+        width:100%;
+        padding:15px;
+    }
+
+    .timeline-line{
+        left:20px;
+    }
+
+    .dream-grid{
+        grid-template-columns:1fr;
+    }
 }
