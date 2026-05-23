@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Our Three-Year Story ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Three Years With You ❤️</title>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!-- AOS -->
+<!-- AOS (Scroll Animations) -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -18,277 +22,125 @@
 <!-- Confetti -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:Poppins,sans-serif;
-  overflow-x:hidden;
-  background:#0b0b10;
-  color:#fff;
-}
-
-/* INTRO */
-#intro{
-  position:fixed;
-  inset:0;
-  background:radial-gradient(circle,#1a1a2a,#000);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-}
-.book{
-  text-align:center;
-  padding:20px;
-}
-.book h1{
-  font-family:Playfair Display;
-  font-size:2.5rem;
-}
-button{
-  margin-top:20px;
-  padding:12px 20px;
-  border:none;
-  border-radius:30px;
-  cursor:pointer;
-  background:#fff;
-  color:#000;
-  font-weight:600;
-}
-
-/* MUSIC */
-#musicControl{
-  position:fixed;
-  bottom:15px;
-  right:15px;
-  background:#fff;
-  color:#000;
-  padding:10px 14px;
-  border-radius:30px;
-  z-index:10000;
-  font-size:12px;
-}
-
-/* SECTIONS */
-section{
-  min-height:100vh;
-  padding:60px 20px;
-  text-align:center;
-}
-
-/* HERO */
-.hero{
-  background:linear-gradient(180deg,#0b0b10,#1b1b2e);
-}
-.hero h1{
-  font-size:2.5rem;
-  font-family:Playfair Display;
-}
-
-/* TIMELINE */
-.timeline-item{
-  margin:30px auto;
-  max-width:500px;
-  background:rgba(255,255,255,0.05);
-  padding:20px;
-  border-radius:15px;
-  backdrop-filter:blur(10px);
-}
-
-/* SEASONS */
-#spring{background:linear-gradient(#2a1b2f,#1a0f1f)}
-#summer{background:linear-gradient(#2f2a12,#1a1408)}
-#autumn{background:linear-gradient(#2a1c12,#140d08)}
-#winter{background:linear-gradient(#101a2a,#070b14)}
-
-/* CARDS */
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
-}
-.card{
-  width:120px;
-  height:120px;
-  background:rgba(255,255,255,0.08);
-  border-radius:15px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  backdrop-filter:blur(8px);
-}
-
-/* LETTER */
-.letter{
-  max-width:600px;
-  margin:0 auto;
-  background:rgba(255,255,255,0.05);
-  padding:20px;
-  border-radius:15px;
-}
-
-/* END */
-#ending{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-}
-
-/* SIMPLE PARTICLE EFFECTS */
-.petal::before,
-.leaf::before,
-.snow::before{
-  content:"";
-}
-
-</style>
 </head>
 
 <body>
 
-<!-- MUSIC -->
+<!-- ================= MUSIC ================= -->
 <audio id="bgMusic" loop>
-<source src="assets/music/song.mp3">
+  <source src="assets/music/our-song.mp3" type="audio/mpeg">
 </audio>
 
-<div id="musicControl">🎵 Play</div>
+<div id="musicControl">🎵 Play Music</div>
 
-<!-- INTRO -->
+<!-- ================= INTRO DIARY ================= -->
 <div id="intro">
+
   <div class="book">
     <h1>Our Story</h1>
-    <p>Three Years. One Diary.</p>
-    <button id="open">Open Diary</button>
+    <p>Three Years in a Diary</p>
+
+    <button id="openDiary">Open Diary</button>
   </div>
+
 </div>
 
-<!-- MAIN -->
+<!-- ================= MAIN ================= -->
 <main id="main">
 
+<!-- HERO -->
 <section class="hero">
-  <h1 data-aos="fade-up">Three Years of Us</h1>
-  <p data-aos="fade-up" data-aos-delay="200">A love story in four seasons</p>
-</section>
-
-<section id="timeline">
-  <h2 data-aos="fade-up">Timeline</h2>
-
-  <div class="timeline-item" data-aos="fade-right">
-    We met ❤️
-  </div>
-
-  <div class="timeline-item" data-aos="fade-left">
-    First date 🌙
-  </div>
-
-  <div class="timeline-item" data-aos="fade-right">
-    Memories grow 🌱
-  </div>
-
-</section>
-
-<section id="spring">
-  <h1 data-aos="zoom-in">Spring</h1>
-  <div class="cards">
-    <div class="card" data-aos="flip-left">First Chat</div>
-    <div class="card" data-aos="flip-left" data-aos-delay="100">First Call</div>
-    <div class="card" data-aos="flip-left" data-aos-delay="200">First Date</div>
-  </div>
-</section>
-
-<section id="summer">
-  <h1 data-aos="zoom-in">Summer</h1>
-  <div class="cards">
-    <div class="card" data-aos="fade-up">Trips</div>
-    <div class="card" data-aos="fade-up" data-aos-delay="100">Laughs</div>
-    <div class="card" data-aos="fade-up" data-aos-delay="200">Joy</div>
-  </div>
-</section>
-
-<section id="autumn">
-  <h1 data-aos="zoom-in">Autumn</h1>
-  <div class="cards">
-    <div class="card" data-aos="fade-right">Challenges</div>
-    <div class="card" data-aos="fade-right" data-aos-delay="100">Growth</div>
-    <div class="card" data-aos="fade-right" data-aos-delay="200">Stronger</div>
-  </div>
-</section>
-
-<section id="winter">
-  <h1 data-aos="zoom-in">Winter</h1>
-  <div class="letter" data-aos="fade-up">
-    <p>
-      Thank you for three years.
-      You are my home, my peace, my forever.
+  <div class="hero-content">
+    <h1 data-aos="fade-up">Three Years of Us</h1>
+    <p data-aos="fade-up" data-aos-delay="200">
+      A cinematic journey through our love story
     </p>
   </div>
 </section>
 
+<!-- TIMELINE -->
+<section id="timeline">
+
+<h2 data-aos="fade-up">Our Timeline</h2>
+
+<div class="timeline-item" data-aos="fade-right">
+  <h3>We Met</h3>
+  <p>The moment everything started.</p>
+</div>
+
+<div class="timeline-item" data-aos="fade-left">
+  <h3>First Date</h3>
+  <p>Nervous smiles and unforgettable memories.</p>
+</div>
+
+<div class="timeline-item" data-aos="fade-right">
+  <h3>Growing Closer</h3>
+  <p>Every day felt more special.</p>
+</div>
+
+</section>
+
+<!-- SPRING -->
+<section id="spring">
+<h1 data-aos="zoom-in">Spring</h1>
+
+<div class="cards">
+  <div class="card" data-aos="flip-left">First Message</div>
+  <div class="card" data-aos="flip-left" data-aos-delay="100">First Call</div>
+  <div class="card" data-aos="flip-left" data-aos-delay="200">First Date</div>
+</div>
+</section>
+
+<!-- SUMMER -->
+<section id="summer">
+<h1 data-aos="zoom-in">Summer</h1>
+
+<div class="cards">
+  <div class="card" data-aos="fade-up">Trips</div>
+  <div class="card" data-aos="fade-up" data-aos-delay="100">Laughs</div>
+  <div class="card" data-aos="fade-up" data-aos-delay="200">Adventures</div>
+</div>
+</section>
+
+<!-- AUTUMN -->
+<section id="autumn">
+<h1 data-aos="zoom-in">Autumn</h1>
+
+<div class="cards">
+  <div class="card" data-aos="fade-right">Challenges</div>
+  <div class="card" data-aos="fade-right" data-aos-delay="100">Growth</div>
+  <div class="card" data-aos="fade-right" data-aos-delay="200">Stronger</div>
+</div>
+</section>
+
+<!-- WINTER -->
+<section id="winter">
+<h1 data-aos="zoom-in">Winter</h1>
+
+<div class="letter" data-aos="fade-up">
+  <p>
+    Thank you for 3 beautiful years.
+    You are my home, my peace, my love.
+  </p>
+</div>
+
+</section>
+
+<!-- ENDING -->
 <section id="ending">
-  <h1 data-aos="zoom-in">The End ❤️</h1>
-  <button id="celebrate">Celebrate 🎉</button>
+<h1 data-aos="zoom-in">The End... or Not ❤️</h1>
+
+<button id="celebrate">Celebrate 🎉</button>
+
 </section>
 
 </main>
 
+<!-- ================= SCRIPTS ================= -->
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script>
-AOS.init({duration:1000,once:true});
-gsap.registerPlugin(ScrollTrigger);
-
-/* INTRO ANIMATION */
-gsap.from(".book",{scale:0.8,opacity:0,duration:1.2});
-
-document.getElementById("open").onclick=()=>{
-  gsap.to("#intro",{opacity:0,duration:1,onComplete:()=>{
-    document.getElementById("intro").style.display="none";
-  }});
-  gsap.from("#main",{opacity:0,y:50,duration:1.5});
-};
-
-/* MUSIC */
-const music=document.getElementById("bgMusic");
-let playing=false;
-
-document.getElementById("musicControl").onclick=()=>{
-  if(!playing){
-    music.play();
-    playing=true;
-    musicControl.innerText="⏸ Pause";
-  }else{
-    music.pause();
-    playing=false;
-    musicControl.innerText="🎵 Play";
-  }
-};
-
-/* SCROLL ANIMATIONS */
-gsap.utils.toArray("section").forEach(sec=>{
-  gsap.from(sec,{
-    scrollTrigger:{
-      trigger:sec,
-      start:"top 80%"
-    },
-    opacity:0,
-    y:80,
-    duration:1
-  });
-});
-
-/* CELEBRATION */
-document.getElementById("celebrate").onclick=()=>{
-  confetti({
-    particleCount:200,
-    spread:100,
-    origin:{y:0.6}
-  });
-
-  gsap.to("body",{backgroundColor:"#000",duration:1.5});
-};
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
