@@ -1,72 +1,78 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0b0b0f;
-  color: white;
-  overflow-x: hidden;
-}
+// ================= AOS INIT =================
+AOS.init({
+  duration: 1000,
+  once: true
+});
 
-section {
-  min-height: 100vh;
-  padding: 60px 20px;
-  text-align: center;
-}
+// ================= GSAP INTRO ANIMATION =================
+gsap.from(".book", {
+  scale: 0.8,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power3.out"
+});
 
-/* INTRO */
-#intro {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
+// ================= OPEN DIARY =================
+document.getElementById("openDiary").addEventListener("click", () => {
 
-.book {
-  text-align: center;
-}
+  gsap.to("#intro", {
+    opacity: 0,
+    duration: 1,
+    onComplete: () => {
+      document.getElementById("intro").style.display = "none";
+    }
+  });
 
-/* HERO */
-.hero {
-  background: linear-gradient(180deg, #111, #1a1a2e);
-}
+  gsap.from("#main", {
+    opacity: 0,
+    y: 50,
+    duration: 1.5
+  });
 
-/* CARDS */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
+});
 
-.card {
-  width: 120px;
-  height: 120px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(10px);
-}
+// ================= MUSIC CONTROL =================
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicControl");
 
-/* SEASONS */
-#spring { background: #2b1b2f; }
-#summer { background: #2f2a12; }
-#autumn { background: #2a1c12; }
-#winter { background: #101a2a; }
+let playing = false;
 
-/* MUSIC BUTTON */
-#musicControl {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: white;
-  color: black;
-  padding: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  z-index: 9999;
-}
+btn.addEventListener("click", () => {
+  if (!playing) {
+    music.play();
+    btn.innerText = "🎵 Pause Music";
+  } else {
+    music.pause();
+    btn.innerText = "🎵 Play Music";
+  }
+  playing = !playing;
+});
+
+// ================= GSAP SCROLL EFFECTS =================
+gsap.utils.toArray("section").forEach(section => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%"
+    },
+    opacity: 0,
+    y: 80,
+    duration: 1
+  });
+});
+
+// ================= CELEBRATION =================
+document.getElementById("celebrate").addEventListener("click", () => {
+
+  confetti({
+    particleCount: 200,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
+
+  gsap.to("body", {
+    backgroundColor: "#000",
+    duration: 2
+  });
+
+});
