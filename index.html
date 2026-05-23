@@ -1,582 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>To My Wifeyy ❤️</title>
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- AOS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<!-- Main CSS -->
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 <!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <!-- Confetti -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
+<style>
+body{
+margin:0;
+font-family:Poppins;
+background:black;
+color:white;
+overflow-x:hidden;
+}
+
+#intro{
+position:fixed;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:black;
+z-index:9999;
+}
+
+.intro-line{
+opacity:0;
+margin:10px;
+text-align:center;
+}
+
+#startStory{
+margin-top:30px;
+padding:15px 30px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+font-weight:bold;
+background:white;
+}
+
+#storybook{
+display:none;
+}
+
+/* SECTIONS */
+section{
+min-height:100vh;
+padding:60px 20px;
+text-align:center;
+}
+
+/* SUMMER */
+#summer{
+background:linear-gradient(#ffcc33,#ff8800);
+}
+
+/* POLAROIDS */
+.polaroid{
+width:160px;
+height:200px;
+background:white;
+color:black;
+padding:10px;
+border-radius:10px;
+position:absolute;
+}
+
+.polaroid img{
+width:100%;
+height:140px;
+object-fit:cover;
+}
+
+/* random positions */
+.p1{top:200px;left:10%}
+.p2{top:400px;right:10%}
+.p3{top:600px;left:20%}
+.p4{top:800px;right:15%}
+.p5{top:1000px;left:30%}
+.p6{top:1200px;right:25%}
+.p7{top:1400px;left:10%}
+.p8{top:1600px;right:10%}
+.p9{top:1800px;left:25%}
+.p10{top:2000px;right:20%}
+
+/* SPRING AUTUMN WINTER COLORS */
+#spring{background:#ffd1dc;color:#222}
+#autumn{background:#8b4513}
+#winter{background:#0a1a2a}
+
+button{
+padding:15px 25px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+margin-top:20px;
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- ===================================== -->
-<!-- AUDIO -->
-<!-- ===================================== -->
-
 <audio id="bgMusic" loop>
-    <source src="assets/music/our-song.mp3" type="audio/mpeg">
+<source src="assets/music/our-song.mp3">
 </audio>
 
-<!-- ===================================== -->
-<!-- INTRO SCREEN -->
-<!-- ===================================== -->
+<!-- INTRO -->
+<div id="intro">
 
-<section id="intro">
+<div class="intro-line">Three years ago...</div>
+<div class="intro-line">A story began...</div>
+<div class="intro-line">And became beautiful ❤️</div>
 
-<div class="stars"></div>
-
-<div class="intro-content">
-
-<h3 class="intro-line">
-Three years ago...
-</h3>
-
-<h3 class="intro-line">
-A chapter of my life began.
-</h3>
-
-<h3 class="intro-line">
-And it became the most beautiful one.
-</h3>
-
-<button id="startStory">
-To My Wifeyy ❤️
-</button>
+<button id="startStory">To My Wifeyy ❤️</button>
 
 </div>
 
-</section>
-
-<!-- ===================================== -->
-<!-- MAIN WEBSITE -->
-<!-- ===================================== -->
-
+<!-- STORY -->
 <main id="storybook">
 
-<!-- ===================================== -->
 <!-- SUMMER -->
-<!-- ===================================== -->
-
 <section id="summer">
 
-<div class="summer-overlay"></div>
+<h1 data-aos="fade-up">Summer</h1>
 
-<div class="season-hero">
-
-<h1>Summer</h1>
-
-<p class="season-quote">
-"In all the summers of my life,
-you became my favorite sunshine."
+<p data-aos="fade-up">
+"In all my life, you are my sunshine."
 </p>
 
-</div>
+<!-- POLAROIDS -->
+<div class="polaroid p1"><img src="assets/images/summer1.jpg"></div>
+<div class="polaroid p2"><img src="assets/images/summer2.jpg"></div>
+<div class="polaroid p3"><img src="assets/images/summer3.jpg"></div>
+<div class="polaroid p4"><img src="assets/images/summer4.jpg"></div>
+<div class="polaroid p5"><img src="assets/images/summer5.jpg"></div>
+<div class="polaroid p6"><img src="assets/images/summer6.jpg"></div>
+<div class="polaroid p7"><img src="assets/images/summer7.jpg"></div>
+<div class="polaroid p8"><img src="assets/images/summer8.jpg"></div>
+<div class="polaroid p9"><img src="assets/images/summer9.jpg"></div>
+<div class="polaroid p10"><img src="assets/images/summer10.jpg"></div>
 
-<!-- Floating Particles -->
-
-<div class="sun-particles"></div>
-
-<!-- ===================================== -->
-<!-- LARGE HERO PHOTO -->
-<!-- ===================================== -->
-
-<section class="memory-section">
-
-<div class="hero-photo">
-
-<img src="assets/images/summer/main.jpg">
-
-<div class="hero-caption">
-The beginning of countless beautiful memories.
-</div>
-
-</div>
+<button onclick="goSpring()">Continue →</button>
 
 </section>
 
-<!-- ===================================== -->
-<!-- POLAROID WALL -->
-<!-- 20 FLOATING PHOTOS -->
-<!-- ===================================== -->
-
-<section class="polaroid-wall">
-
-<div class="polaroid p1">
-<img src="assets/images/summer/summer1.jpg">
-<span>Memory #1</span>
-</div>
-
-<div class="polaroid p2">
-<img src="assets/images/summer/summer2.jpg">
-<span>Memory #2</span>
-</div>
-
-<div class="polaroid p3">
-<img src="assets/images/summer/summer3.jpg">
-<span>Memory #3</span>
-</div>
-
-<div class="polaroid p4">
-<img src="assets/images/summer/summer4.jpg">
-<span>Memory #4</span>
-</div>
-
-<div class="polaroid p5">
-<img src="assets/images/summer/summer5.jpg">
-<span>Memory #5</span>
-</div>
-
-<div class="polaroid p6">
-<img src="assets/images/summer/summer6.jpg">
-<span>Memory #6</span>
-</div>
-
-<div class="polaroid p7">
-<img src="assets/images/summer/summer7.jpg">
-<span>Memory #7</span>
-</div>
-
-<div class="polaroid p8">
-<img src="assets/images/summer/summer8.jpg">
-<span>Memory #8</span>
-</div>
-
-<div class="polaroid p9">
-<img src="assets/images/summer/summer9.jpg">
-<span>Memory #9</span>
-</div>
-
-<div class="polaroid p10">
-<img src="assets/images/summer/summer10.jpg">
-<span>Memory #10</span>
-</div>
-
-<div class="polaroid p11">
-<img src="assets/images/summer/summer11.jpg">
-<span>Memory #11</span>
-</div>
-
-<div class="polaroid p12">
-<img src="assets/images/summer/summer12.jpg">
-<span>Memory #12</span>
-</div>
-
-<div class="polaroid p13">
-<img src="assets/images/summer/summer13.jpg">
-<span>Memory #13</span>
-</div>
-
-<div class="polaroid p14">
-<img src="assets/images/summer/summer14.jpg">
-<span>Memory #14</span>
-</div>
-
-<div class="polaroid p15">
-<img src="assets/images/summer/summer15.jpg">
-<span>Memory #15</span>
-</div>
-
-<div class="polaroid p16">
-<img src="assets/images/summer/summer16.jpg">
-<span>Memory #16</span>
-</div>
-
-<div class="polaroid p17">
-<img src="assets/images/summer/summer17.jpg">
-<span>Memory #17</span>
-</div>
-
-<div class="polaroid p18">
-<img src="assets/images/summer/summer18.jpg">
-<span>Memory #18</span>
-</div>
-
-<div class="polaroid p19">
-<img src="assets/images/summer/summer19.jpg">
-<span>Memory #19</span>
-</div>
-
-<div class="polaroid p20">
-<img src="assets/images/summer/summer20.jpg">
-<span>Memory #20</span>
-</div>
-
-</section>
-
-<!-- ===================================== -->
-<!-- SUMMER STORY -->
-<!-- ===================================== -->
-
-<section class="summer-story">
-
-<div class="story-card" data-aos="fade-up">
-<h2>Our Adventures</h2>
-
-<p>
-Replace this text with your favorite trip memory.
-Describe where you went, what happened,
-and why it became unforgettable.
-</p>
-
-</div>
-
-<div class="story-card" data-aos="fade-up">
-<h2>Our Funniest Moments</h2>
-
-<p>
-A memory that still makes both of you laugh.
-</p>
-
-</div>
-
-<div class="story-card" data-aos="fade-up">
-<h2>Our Favorite Day</h2>
-
-<p>
-Tell the story behind your favorite day together.
-</p>
-
-</div>
-
-</section>
-
-<!-- ===================================== -->
-<!-- SUMMER END -->
-<!-- ===================================== -->
-
-<section class="season-ending">
-
-<h2>
-And before I knew it...
-</h2>
-
-<p>
-You became my favorite part of every day.
-</p>
-
-<button id="summerToSpring">
-Continue Our Story →
-</button>
-
-</section>
-
-</section>
-
-<!-- ===================================== -->
 <!-- SPRING -->
-<!-- ===================================== -->
-
 <section id="spring">
 
-<div class="spring-particles"></div>
+<h1 data-aos="fade-up">Spring</h1>
 
-<div class="season-hero">
+<p>Our beginnings 🌸</p>
 
-<h1>Spring</h1>
+<div data-aos="fade-up">1. We met</div>
+<div data-aos="fade-up">2. First chat</div>
+<div data-aos="fade-up">3. First call</div>
+<div data-aos="fade-up">4. First date</div>
+<div data-aos="fade-up">5. First picture</div>
+<div data-aos="fade-up">6. First trip</div>
+<div data-aos="fade-up">7. First laugh</div>
+<div data-aos="fade-up">8. First fight</div>
+<div data-aos="fade-up">9. First fix</div>
+<div data-aos="fade-up">10. Today</div>
 
-<p class="season-quote">
-"Every flower blooms differently,
-but every day with you helped us grow."
-</p>
-
-</div>
-
-<!-- TIMELINE -->
-
-<section class="timeline-container">
-
-<div class="timeline-line"></div>
-
-<div class="timeline-item left">
-
-<div class="timeline-content">
-<h3>1. We Met</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event1.jpg">
-</div>
-
-</div>
-
-<div class="timeline-item right">
-
-<div class="timeline-content">
-<h3>2. First Chat</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event2.jpg">
-</div>
-
-</div>
-
-<div class="timeline-item left">
-
-<div class="timeline-content">
-<h3>3. First Call</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event3.jpg">
-</div>
-
-</div>
-
-<div class="timeline-item right">
-
-<div class="timeline-content">
-<h3>4. First Date</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event4.jpg">
-</div>
-
-</div>
-
-<div class="timeline-item left">
-
-<div class="timeline-content">
-<h3>5. First Picture Together</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event5.jpg">
-</div>
-
-</div>
-
-<div class="timeline-item right">
-
-<div class="timeline-content">
-<h3>6. First Monthsary</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event6.jpg">
-</div>
-
-</div>
-
-<div class="timeline-item left">
-
-<div class="timeline-content">
-<h3>7. First Adventure</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event7.jpg">
-</div>
-
-</div>
-
-<div class="timeline-item right">
-
-<div class="timeline-content">
-<h3>8. First Big Achievement</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event8.jpg">
-</div>
-
-</div>
-
-<div class="timeline-item left">
-
-<div class="timeline-content">
-<h3>9. Second Anniversary</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event9.jpg">
-</div>
-
-</div>
-
-<div class="timeline-item right">
-
-<div class="timeline-content">
-<h3>10. Third Anniversary</h3>
-<p>Describe your memory.</p>
-<img src="assets/images/timeline/event10.jpg">
-</div>
-
-</div>
+<button onclick="goAutumn()">Continue →</button>
 
 </section>
 
-<section class="season-ending">
-
-<h2>
-We kept growing together...
-</h2>
-
-<p>
-And our story was only getting started.
-</p>
-
-<button id="springToAutumn">
-Let's Keep Going →
-</button>
-
-</section>
-
-</section>
-
-<!-- ===================================== -->
 <!-- AUTUMN -->
-<!-- ===================================== -->
-
 <section id="autumn">
 
-<div class="autumn-particles"></div>
+<h1 data-aos="fade-up">Autumn</h1>
 
-<div class="season-hero">
+<p>Our future dreams 🍂</p>
 
-<h1>Autumn</h1>
+<div data-aos="fade-up">Travel together</div>
+<div data-aos="fade-up">Live together</div>
+<div data-aos="fade-up">Grow together</div>
+<div data-aos="fade-up">Forever together</div>
 
-<p class="season-quote">
-"The future feels less uncertain
-when I imagine it with you."
-</p>
-
-</div>
-
-<section class="dream-board">
-
-<h2>Our Future Together</h2>
-
-<div class="dream-grid">
-
-<div class="dream-card">
-🌍 Travel Together
-</div>
-
-<div class="dream-card">
-🎓 Graduate Together
-</div>
-
-<div class="dream-card">
-🏡 Our Future Home
-</div>
-
-<div class="dream-card">
-🐶 First Pet
-</div>
-
-<div class="dream-card">
-✈️ Dream Destination
-</div>
-
-<div class="dream-card">
-❤️ More Anniversaries
-</div>
-
-<div class="dream-card">
-☕ Coffee Dates
-</div>
-
-<div class="dream-card">
-🌅 Future Adventures
-</div>
-
-</div>
+<button onclick="goWinter()">Final →</button>
 
 </section>
 
-<section class="future-letter">
-
-<h2>Letter To Our Future</h2>
-
-<p>
-Replace this with your own future letter.
-Write about where you hope both of you
-will be in five years.
-</p>
-
-</section>
-
-<section class="season-ending">
-
-<h2>
-One Last Chapter...
-</h2>
-
-<button id="autumnToWinter">
-Continue →
-</button>
-
-</section>
-
-</section>
-
-<!-- ===================================== -->
 <!-- WINTER -->
-<!-- ===================================== -->
-
 <section id="winter">
 
-<div class="snow-container"></div>
+<h1 data-aos="fade-up">Winter</h1>
 
-<div class="season-hero">
+<p>Thank you for everything ❤️</p>
 
-<h1>Winter</h1>
-
-<p class="season-quote">
-"Home was never a place.
-It was always you."
-</p>
-
-</div>
-
-<section class="final-letter">
-
-<h2>
-Thank You ❤️
-</h2>
-
-<p>
-Three years down.
-Forever to go.
-</p>
-
-</section>
-
-<section class="drive-section">
-
-<a href="YOUR_GOOGLE_DRIVE_LINK_HERE"
-target="_blank"
-class="gift-button">
-
-Open Your Final Gift ❤️
-
+<a href="YOUR_DRIVE_LINK" target="_blank">
+Open Gift 🎁
 </a>
 
-</section>
-
-<section id="finale">
-
-<h1>
-I Love You.
-</h1>
-
-<h2>
-Happy 3rd Anniversary ❤️
-</h2>
-
-</section>
+<h2>I love you ❤️</h2>
 
 </section>
 
 </main>
 
-<script src="script.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+AOS.init();
+
+/* INTRO TEXT ANIMATION */
+gsap.to(".intro-line",{
+opacity:1,
+stagger:1,
+duration:1
+});
+
+/* FIXED START BUTTON */
+document.getElementById("startStory").addEventListener("click", async () => {
+
+const music = document.getElementById("bgMusic");
+music.volume = 0.6;
+
+try{
+await music.play();
+}catch(e){
+console.log("blocked until interaction");
+}
+
+gsap.to("#intro",{
+opacity:0,
+duration:1,
+onComplete:()=>{
+document.getElementById("intro").style.display="none";
+document.getElementById("storybook").style.display="block";
+ScrollTrigger.refresh();
+}
+});
+
+});
+
+/* SCENE TRANSITIONS */
+function goSpring(){
+document.getElementById("spring").scrollIntoView({behavior:"smooth"});
+}
+
+function goAutumn(){
+document.getElementById("autumn").scrollIntoView({behavior:"smooth"});
+}
+
+function goWinter(){
+document.getElementById("winter").scrollIntoView({behavior:"smooth"});
+
+confetti({
+particleCount:200,
+spread:120
+});
+}
+
+/* FLOAT POLAROIDS */
+gsap.utils.toArray(".polaroid").forEach(el=>{
+gsap.to(el,{
+y:"+=20",
+repeat:-1,
+yoyo:true,
+duration:gsap.utils.random(2,4)
+});
+});
+</script>
 
 </body>
 </html>
