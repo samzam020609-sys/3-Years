@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Three Years With You ❤️</title>
+<title>To My Wifeyy ❤️</title>
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!-- AOS (Scroll Animations) -->
+<!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<!-- CSS -->
+<!-- Main CSS -->
 <link rel="stylesheet" href="style.css">
 
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <!-- Confetti -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -26,119 +31,550 @@
 
 <body>
 
-<!-- ================= MUSIC ================= -->
+<!-- ===================================== -->
+<!-- AUDIO -->
+<!-- ===================================== -->
+
 <audio id="bgMusic" loop>
-  <source src="assets/music/our-song.mp3" type="audio/mpeg">
+    <source src="assets/music/our-song.mp3" type="audio/mpeg">
 </audio>
 
-<div id="musicControl">🎵 Play Music</div>
+<!-- ===================================== -->
+<!-- INTRO SCREEN -->
+<!-- ===================================== -->
 
-<!-- ================= INTRO DIARY ================= -->
-<div id="intro">
+<section id="intro">
 
-  <div class="book">
-    <h1>Our Story</h1>
-    <p>Three Years in a Diary</p>
+<div class="stars"></div>
 
-    <button id="openDiary">Open Diary</button>
-  </div>
+<div class="intro-content">
+
+<h3 class="intro-line">
+Three years ago...
+</h3>
+
+<h3 class="intro-line">
+A chapter of my life began.
+</h3>
+
+<h3 class="intro-line">
+And it became the most beautiful one.
+</h3>
+
+<button id="startStory">
+To My Wifeyy ❤️
+</button>
 
 </div>
 
-<!-- ================= MAIN ================= -->
-<main id="main">
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1 data-aos="fade-up">Three Years of Us</h1>
-    <p data-aos="fade-up" data-aos-delay="200">
-      A cinematic journey through our love story
-    </p>
-  </div>
 </section>
+
+<!-- ===================================== -->
+<!-- MAIN WEBSITE -->
+<!-- ===================================== -->
+
+<main id="storybook">
+
+<!-- ===================================== -->
+<!-- SUMMER -->
+<!-- ===================================== -->
+
+<section id="summer">
+
+<div class="summer-overlay"></div>
+
+<div class="season-hero">
+
+<h1>Summer</h1>
+
+<p class="season-quote">
+"In all the summers of my life,
+you became my favorite sunshine."
+</p>
+
+</div>
+
+<!-- Floating Particles -->
+
+<div class="sun-particles"></div>
+
+<!-- ===================================== -->
+<!-- LARGE HERO PHOTO -->
+<!-- ===================================== -->
+
+<section class="memory-section">
+
+<div class="hero-photo">
+
+<img src="assets/images/summer/main.jpg">
+
+<div class="hero-caption">
+The beginning of countless beautiful memories.
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- POLAROID WALL -->
+<!-- 20 FLOATING PHOTOS -->
+<!-- ===================================== -->
+
+<section class="polaroid-wall">
+
+<div class="polaroid p1">
+<img src="assets/images/summer/summer1.jpg">
+<span>Memory #1</span>
+</div>
+
+<div class="polaroid p2">
+<img src="assets/images/summer/summer2.jpg">
+<span>Memory #2</span>
+</div>
+
+<div class="polaroid p3">
+<img src="assets/images/summer/summer3.jpg">
+<span>Memory #3</span>
+</div>
+
+<div class="polaroid p4">
+<img src="assets/images/summer/summer4.jpg">
+<span>Memory #4</span>
+</div>
+
+<div class="polaroid p5">
+<img src="assets/images/summer/summer5.jpg">
+<span>Memory #5</span>
+</div>
+
+<div class="polaroid p6">
+<img src="assets/images/summer/summer6.jpg">
+<span>Memory #6</span>
+</div>
+
+<div class="polaroid p7">
+<img src="assets/images/summer/summer7.jpg">
+<span>Memory #7</span>
+</div>
+
+<div class="polaroid p8">
+<img src="assets/images/summer/summer8.jpg">
+<span>Memory #8</span>
+</div>
+
+<div class="polaroid p9">
+<img src="assets/images/summer/summer9.jpg">
+<span>Memory #9</span>
+</div>
+
+<div class="polaroid p10">
+<img src="assets/images/summer/summer10.jpg">
+<span>Memory #10</span>
+</div>
+
+<div class="polaroid p11">
+<img src="assets/images/summer/summer11.jpg">
+<span>Memory #11</span>
+</div>
+
+<div class="polaroid p12">
+<img src="assets/images/summer/summer12.jpg">
+<span>Memory #12</span>
+</div>
+
+<div class="polaroid p13">
+<img src="assets/images/summer/summer13.jpg">
+<span>Memory #13</span>
+</div>
+
+<div class="polaroid p14">
+<img src="assets/images/summer/summer14.jpg">
+<span>Memory #14</span>
+</div>
+
+<div class="polaroid p15">
+<img src="assets/images/summer/summer15.jpg">
+<span>Memory #15</span>
+</div>
+
+<div class="polaroid p16">
+<img src="assets/images/summer/summer16.jpg">
+<span>Memory #16</span>
+</div>
+
+<div class="polaroid p17">
+<img src="assets/images/summer/summer17.jpg">
+<span>Memory #17</span>
+</div>
+
+<div class="polaroid p18">
+<img src="assets/images/summer/summer18.jpg">
+<span>Memory #18</span>
+</div>
+
+<div class="polaroid p19">
+<img src="assets/images/summer/summer19.jpg">
+<span>Memory #19</span>
+</div>
+
+<div class="polaroid p20">
+<img src="assets/images/summer/summer20.jpg">
+<span>Memory #20</span>
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- SUMMER STORY -->
+<!-- ===================================== -->
+
+<section class="summer-story">
+
+<div class="story-card" data-aos="fade-up">
+<h2>Our Adventures</h2>
+
+<p>
+Replace this text with your favorite trip memory.
+Describe where you went, what happened,
+and why it became unforgettable.
+</p>
+
+</div>
+
+<div class="story-card" data-aos="fade-up">
+<h2>Our Funniest Moments</h2>
+
+<p>
+A memory that still makes both of you laugh.
+</p>
+
+</div>
+
+<div class="story-card" data-aos="fade-up">
+<h2>Our Favorite Day</h2>
+
+<p>
+Tell the story behind your favorite day together.
+</p>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- SUMMER END -->
+<!-- ===================================== -->
+
+<section class="season-ending">
+
+<h2>
+And before I knew it...
+</h2>
+
+<p>
+You became my favorite part of every day.
+</p>
+
+<button id="summerToSpring">
+Continue Our Story →
+</button>
+
+</section>
+
+</section>
+
+<!-- ===================================== -->
+<!-- SPRING -->
+<!-- ===================================== -->
+
+<section id="spring">
+
+<div class="spring-particles"></div>
+
+<div class="season-hero">
+
+<h1>Spring</h1>
+
+<p class="season-quote">
+"Every flower blooms differently,
+but every day with you helped us grow."
+</p>
+
+</div>
 
 <!-- TIMELINE -->
-<section id="timeline">
 
-<h2 data-aos="fade-up">Our Timeline</h2>
+<section class="timeline-container">
 
-<div class="timeline-item" data-aos="fade-right">
-  <h3>We Met</h3>
-  <p>The moment everything started.</p>
+<div class="timeline-line"></div>
+
+<div class="timeline-item left">
+
+<div class="timeline-content">
+<h3>1. We Met</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event1.jpg">
 </div>
 
-<div class="timeline-item" data-aos="fade-left">
-  <h3>First Date</h3>
-  <p>Nervous smiles and unforgettable memories.</p>
 </div>
 
-<div class="timeline-item" data-aos="fade-right">
-  <h3>Growing Closer</h3>
-  <p>Every day felt more special.</p>
+<div class="timeline-item right">
+
+<div class="timeline-content">
+<h3>2. First Chat</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event2.jpg">
+</div>
+
+</div>
+
+<div class="timeline-item left">
+
+<div class="timeline-content">
+<h3>3. First Call</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event3.jpg">
+</div>
+
+</div>
+
+<div class="timeline-item right">
+
+<div class="timeline-content">
+<h3>4. First Date</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event4.jpg">
+</div>
+
+</div>
+
+<div class="timeline-item left">
+
+<div class="timeline-content">
+<h3>5. First Picture Together</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event5.jpg">
+</div>
+
+</div>
+
+<div class="timeline-item right">
+
+<div class="timeline-content">
+<h3>6. First Monthsary</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event6.jpg">
+</div>
+
+</div>
+
+<div class="timeline-item left">
+
+<div class="timeline-content">
+<h3>7. First Adventure</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event7.jpg">
+</div>
+
+</div>
+
+<div class="timeline-item right">
+
+<div class="timeline-content">
+<h3>8. First Big Achievement</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event8.jpg">
+</div>
+
+</div>
+
+<div class="timeline-item left">
+
+<div class="timeline-content">
+<h3>9. Second Anniversary</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event9.jpg">
+</div>
+
+</div>
+
+<div class="timeline-item right">
+
+<div class="timeline-content">
+<h3>10. Third Anniversary</h3>
+<p>Describe your memory.</p>
+<img src="assets/images/timeline/event10.jpg">
+</div>
+
 </div>
 
 </section>
 
-<!-- SPRING -->
-<section id="spring">
-<h1 data-aos="zoom-in">Spring</h1>
+<section class="season-ending">
 
-<div class="cards">
-  <div class="card" data-aos="flip-left">First Message</div>
-  <div class="card" data-aos="flip-left" data-aos-delay="100">First Call</div>
-  <div class="card" data-aos="flip-left" data-aos-delay="200">First Date</div>
-</div>
+<h2>
+We kept growing together...
+</h2>
+
+<p>
+And our story was only getting started.
+</p>
+
+<button id="springToAutumn">
+Let's Keep Going →
+</button>
+
 </section>
 
-<!-- SUMMER -->
-<section id="summer">
-<h1 data-aos="zoom-in">Summer</h1>
-
-<div class="cards">
-  <div class="card" data-aos="fade-up">Trips</div>
-  <div class="card" data-aos="fade-up" data-aos-delay="100">Laughs</div>
-  <div class="card" data-aos="fade-up" data-aos-delay="200">Adventures</div>
-</div>
 </section>
 
+<!-- ===================================== -->
 <!-- AUTUMN -->
+<!-- ===================================== -->
+
 <section id="autumn">
-<h1 data-aos="zoom-in">Autumn</h1>
 
-<div class="cards">
-  <div class="card" data-aos="fade-right">Challenges</div>
-  <div class="card" data-aos="fade-right" data-aos-delay="100">Growth</div>
-  <div class="card" data-aos="fade-right" data-aos-delay="200">Stronger</div>
+<div class="autumn-particles"></div>
+
+<div class="season-hero">
+
+<h1>Autumn</h1>
+
+<p class="season-quote">
+"The future feels less uncertain
+when I imagine it with you."
+</p>
+
 </div>
+
+<section class="dream-board">
+
+<h2>Our Future Together</h2>
+
+<div class="dream-grid">
+
+<div class="dream-card">
+🌍 Travel Together
+</div>
+
+<div class="dream-card">
+🎓 Graduate Together
+</div>
+
+<div class="dream-card">
+🏡 Our Future Home
+</div>
+
+<div class="dream-card">
+🐶 First Pet
+</div>
+
+<div class="dream-card">
+✈️ Dream Destination
+</div>
+
+<div class="dream-card">
+❤️ More Anniversaries
+</div>
+
+<div class="dream-card">
+☕ Coffee Dates
+</div>
+
+<div class="dream-card">
+🌅 Future Adventures
+</div>
+
+</div>
+
 </section>
 
+<section class="future-letter">
+
+<h2>Letter To Our Future</h2>
+
+<p>
+Replace this with your own future letter.
+Write about where you hope both of you
+will be in five years.
+</p>
+
+</section>
+
+<section class="season-ending">
+
+<h2>
+One Last Chapter...
+</h2>
+
+<button id="autumnToWinter">
+Continue →
+</button>
+
+</section>
+
+</section>
+
+<!-- ===================================== -->
 <!-- WINTER -->
-<section id="winter">
-<h1 data-aos="zoom-in">Winter</h1>
+<!-- ===================================== -->
 
-<div class="letter" data-aos="fade-up">
-  <p>
-    Thank you for 3 beautiful years.
-    You are my home, my peace, my love.
-  </p>
+<section id="winter">
+
+<div class="snow-container"></div>
+
+<div class="season-hero">
+
+<h1>Winter</h1>
+
+<p class="season-quote">
+"Home was never a place.
+It was always you."
+</p>
+
 </div>
+
+<section class="final-letter">
+
+<h2>
+Thank You ❤️
+</h2>
+
+<p>
+Three years down.
+Forever to go.
+</p>
 
 </section>
 
-<!-- ENDING -->
-<section id="ending">
-<h1 data-aos="zoom-in">The End... or Not ❤️</h1>
+<section class="drive-section">
 
-<button id="celebrate">Celebrate 🎉</button>
+<a href="YOUR_GOOGLE_DRIVE_LINK_HERE"
+target="_blank"
+class="gift-button">
+
+Open Your Final Gift ❤️
+
+</a>
+
+</section>
+
+<section id="finale">
+
+<h1>
+I Love You.
+</h1>
+
+<h2>
+Happy 3rd Anniversary ❤️
+</h2>
+
+</section>
 
 </section>
 
 </main>
-
-<!-- ================= SCRIPTS ================= -->
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script src="script.js"></script>
 
